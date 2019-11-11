@@ -1,0 +1,90 @@
+.page{
+    margin: 0;
+}
+.fnav-links a{
+    font-size: 14px;
+}
+.top-footer{
+    height: 44px;
+    background-color: #5E5652;
+}
+.top-footer .needhelp-heading {
+    background: url("../images/share-text-bg.gif.png") no-repeat scroll right top rgba(0,0,0,0);
+    color: #FFF;
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 40px;
+    width: 212px;
+}
+.top-footer .needhelp-text {
+    color: #FFF;
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 30px;
+}
+.link{
+    padding: 20px 0;
+}
+.link ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.link ul li a{
+    color: #333;
+}
+.bottom-footer{
+    background-color: #F1F1F1;
+    padding: 10px 0;
+    text-align: center;
+}
+.sa-content a{
+    color: #2a6496;
+    font-size: 14px;
+}
+.sa-content a:hover{
+    color: #D40000;
+    text-decoration: underline;
+}
+.copyright{
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+.needhelp-text a{
+    color: #fff;
+}
+.needhelp-text a:hover{
+    color: #fff;
+}
+@media screen and (max-width: 1270px){
+    .fnav-title{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 767px){
+    .site-info .link .row .col-3{
+        display: inline-block;
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 476px){
+    .site-info .link .row .col-3:nth-child(odd) {
+        margin-right: 20px;
+    }
+    .top-footer .link .container{
+        width: 350px;
+    }
+    .fnav-title{
+        font-size: 15px;
+    }
+    .fnav-links a {
+        font-size: 12px;
+    }
+}

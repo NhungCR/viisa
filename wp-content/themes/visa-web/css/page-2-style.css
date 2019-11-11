@@ -1,0 +1,1788 @@
+.item-title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.aiport-concierge ul {
+    list-style: circle;
+    font-size: 14px;
+    margin: 0 0 1.5em 3em;
+    padding: 0 35px;
+}
+
+.aiport-concierge .departure-services {
+    padding: 0;
+    list-style: inside;
+}
+
+.service-form {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #DDD;
+    padding: 20px 15px;
+}
+
+.service-form .service-title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.service-form .step-title {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.service-form label {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.airport-fast-track-title,
+.welcome-name {
+    display: flex;
+}
+
+.airport-fast-track-item,
+.welcome-name-item {
+    width: 1000px;
+}
+
+.airport-service-form .div {
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #DDD;
+    margin: 10px 0;
+}
+
+.welcome-name-item-1 {
+    flex-basis: 300px;
+    margin-right: 5px;
+}
+
+.panel-fees {
+    background-color: #FFF;
+    padding: 0;
+    border: 1px solid #DDD;
+    position: relative;
+}
+
+.service-form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.panel-fees li {
+    border-bottom: 1px solid #BDC6CA;
+    padding: 5px;
+}
+
+.panel-fees-item p {
+    margin: 0;
+}
+
+.panel-fees .total span {
+    color: #DC2222;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.airport-service-form .contact-information .welcome-board {
+    width: 100%;
+    background-color: #FFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.airport-service-form .contact-information .welcome {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.airport-service-form .contact-information .welcome-name-t {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 0;
+}
+
+.airport-service-form .contact-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.related-item {
+    margin-top: 20px;
+}
+
+.related-item .related-heading {
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.related-item ul {
+    margin: 0;
+    padding: 0;
+    list-style: inside;
+}
+
+.passport-photo-img-1 {
+    background: url("../images/passport-photo.jpg") no-repeat scroll center center transparent;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    width: 35%;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.passport-data {
+    background: url("../images/passport-data.png") no-repeat scroll center center transparent;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    width: 64%;
+    position: relative;
+    border: 1px solid #ddd;
+    margin-left: 1%;
+}
+
+.btn-file-delete {
+    position: absolute;
+    top: 0;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    right: 5px;
+}
+
+.select {
+    position: absolute;
+    bottom: 0;
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.passport-photo {
+    height: 250px;
+    display: flex;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.popup .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.frm-check-visa {
+    padding: 40px;
+    background-color: #F8F8F8;
+    border: 1px solid #DDD;
+    margin-bottom: 30px;
+}
+
+.wp-block-image {
+    margin-top: 0;
+}
+
+#post-184 .entry-content p {
+    margin: 10px 0;
+}
+
+#post-184 .entry-content p a {
+    background-color: red;
+    padding: 7px;
+    color: #fff;
+}
+
+#post-184 .entry-content p a:hover {
+    text-decoration: none;
+}
+
+.frm-check-visa p {
+    margin-bottom: 0;
+}
+
+.frm-check-visa .note {
+    margin-top: 0;
+}
+
+.member-vip {
+    display: flex;
+}
+
+.member-vip div:last-child {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.login-vip {
+    margin: 30px 0;
+}
+
+.member {
+    background-color: #DE4A4A;
+    color: #FFFFFF;
+    padding: 15px 0px;
+}
+
+.cluster {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cluster ul {
+    margin: 0 0 1.5em 3em;
+    font-size: 14px;
+}
+
+.cluster .col-6 {
+    width: 48%;
+}
+
+.cluster-ul {
+    width: 1000px;
+}
+
+.table-countries {
+    background-color: #FFF;
+}
+
+.table-countries td:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.visa-tips .tip-item {
+    padding-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.visa-tips {
+    margin: 30px 0 60px;
+}
+
+.our-team {
+    margin: 40px 0;
+    background: url("../images/shadow-bar.jpg") no-repeat scroll center bottom transparent;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    min-height: 200px;
+    padding-bottom: 20px;
+}
+
+.our-team h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.name_post h4,
+.name_post p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.our-team img {
+    width: 100%;
+}
+
+.our-team .col-4 {
+    width: 31%;
+}
+
+.our-team .row {
+    margin-bottom: 30px;
+}
+
+#primary h1 {
+    margin: 0;
+}
+
+#primary {
+    margin: 30px 0 60px;
+}
+
+
+/* page how it works */
+
+.question .dwqa-ask-question {
+    background-color: #DE4A4A;
+    border-color: #DE4A4A;
+}
+
+.question .dwqa-ask-question:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.question {
+    margin: 60px 0;
+}
+
+.question .tab {
+    border-bottom: 1px solid #D4D4D4;
+    margin-bottom: 30px;
+}
+
+.question .tab span {
+    border-bottom: 2px solid #E41E01;
+    color: #E41E01;
+    font-weight: 700;
+    padding-bottom: 3px;
+}
+
+.question #dwqa-search,
+.question .dwqa-question-filter {
+    display: none;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.processing {
+    background: url("../images/how-it-works-banner.jpg") no-repeat scroll bottom center transparent;
+    min-height: 300px;
+    position: relative;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.text-banner .text-title {
+    margin: 10px 0 0;
+    font-weight: 100;
+}
+
+.text-banner h5 {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: url(../images/foot-black-bg.png) repeat scroll 0 0 transparent;
+    width: 100%;
+    color: #fff;
+}
+
+.f32 {
+    font-size: 32px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.text-color-grey {
+    color: #aaa;
+}
+
+.title-page-2 h2 {
+    margin-bottom: 0;
+}
+
+.title-page-2 p {
+    margin-top: 0;
+}
+
+.step h2 {
+    color: #E41E01;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.step .f14 {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row-step {
+    margin: 50px 0;
+}
+
+a {
+    color: #004B91;
+}
+
+a:hover {
+    color: #D40000;
+    text-decoration: underline;
+}
+
+.apply-visa a:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+    text-decoration: none;
+}
+
+.apply-visa {
+    margin-bottom: 20px;
+}
+
+.trustpilot-content {
+    padding: 15px;
+    background-color: #F5F5F5;
+}
+
+.group .form-group {
+    display: flex;
+}
+
+.group .form-group-item {
+    width: 200px;
+}
+
+.group .group-item-2 {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.group .group-item-2 select {
+    padding: 0 5px;
+}
+
+.group-item-1 {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+#contact_title {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.acceptance {
+    height: 200px;
+    overflow: scroll;
+    padding: 15px;
+}
+
+.check-accep .checkbox label {
+    padding-left: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.check-accep .checkbox:not(:first-child) {
+    margin-top: 0;
+}
+
+.step-apply-visa {
+    margin: 30px auto 60px;
+}
+
+a.terms_conditions_confirm {
+    color: #004B91;
+    text-decoration: underline;
+}
+
+.table-summary {
+    border-collapse: collapse;
+    margin: 0 0 18px 0;
+    font-size: 14px;
+}
+
+#review-visa .table-summary th {
+    background: #F1F1F1;
+    text-align: left;
+}
+
+#review-visa .table-summary th,
+#review-visa .table-summary td {
+    padding: 7px 10px;
+    border: 1px solid #DDD;
+}
+
+.review-visa-item {
+    margin-bottom: 60px;
+}
+
+
+/* page apply-visa */
+
+.tab-step {
+    border-bottom: 3px solid #DE4A4A;
+    margin: 0 0 30px;
+    height: 39px;
+}
+
+.tab-step .note {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 10px;
+    float: left;
+}
+
+.style-step {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: flex;
+}
+
+ul.style-step li {
+    background-color: #F2F3F3;
+    color: #A2A2A2;
+    font-weight: 700;
+    margin-left: 2px;
+    padding: 6px 15px;
+}
+
+ul.style-step li.active {
+    background: none repeat scroll 0 0 #DE4A4A;
+    color: #FFF;
+}
+
+.red,
+.required,
+.text-color-red {
+    color: #FF0000;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.select-date:not(:last-child) {
+    padding-right: 10px;
+}
+
+.processing-note {
+    background-color: #ECEFF1;
+    color: #444;
+    margin-top: 12px;
+    padding: 15px;
+    font-size: 12px;
+    position: relative;
+}
+
+.processing-note:before {
+    position: absolute;
+    display: block;
+    top: -12px;
+    left: 20px;
+    content: " ";
+    box-sizing: border-box;
+    z-index: 2;
+    border-color: transparent transparent rgb(236, 239, 241);
+    border-style: solid;
+    border-width: 6px;
+}
+
+.radio:not(:first-child),
+.checkbox:not(:first-child) {
+    margin-top: 10px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #DE4A4A;
+    border-color: #DE4A4A;
+    padding: 10px;
+}
+
+.panel-fees-item {
+    border-bottom: 1px solid #BDC6CA;
+    padding: 10px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.panel-fees span,
+.support-content span {
+    float: right;
+    font-size: 14px;
+}
+
+.panel-fees .price {
+    color: #005286;
+    font-weight: 700;
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373;
+    font-size: 12px;
+}
+
+.input-group {
+    display: flex;
+}
+
+.panel-fees-item .input-group-btn .btn-danger {
+    padding: 10px;
+}
+
+.bggray {
+    background-color: #F8F8F8;
+}
+
+span.total_fee {
+    color: #DC2222;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.panel-fees .payment-methods {
+    background-color: #ECEFF1;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.stamping_fee_excluded {
+    margin-bottom: 0;
+}
+
+.panel-fees {
+    border: 1px solid #BDC6CA;
+}
+
+.applymore15 .here {
+    text-decoration: underline;
+}
+
+.applymore15 p {
+    margin: 0;
+}
+
+.applymore15 {
+    margin-bottom: 50px;
+}
+
+.group h2 {
+    background-color: #F1F1F1;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding: 12px 15px;
+    color: #D40000;
+}
+
+#step-3 .group {
+    border: 1px solid #DDD;
+    margin-bottom: 15px;
+    width: 93.3333333%;
+}
+
+.birth-day,
+.passport-detail,
+.expiry-date {
+    display: flex;
+}
+
+.passport-detail-item {
+    padding: 3px;
+}
+
+.religion {
+    width: 50%;
+}
+
+.passport-detail-item label {
+    font-size: 12px;
+}
+
+.select-bod,
+.select-expiry-date {
+    padding: 0 3px;
+}
+
+.group-content,
+.passport-information .processing-note {
+    margin: 10px;
+}
+
+.passport-information .processing-note ul {
+    margin-left: 30px;
+}
+
+.definitions a:hover,
+.extra-service a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* page visa fees */
+
+.tourist-table {
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.extra-service-item {
+    margin-bottom: 30px;
+}
+
+.fees {
+    background: url("../images/pricing-bg.jpg") no-repeat scroll bottom center transparent;
+    min-height: 300px;
+    position: relative;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.page-title {
+    font-size: 24px;
+    line-height: 1.1em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 0;
+}
+
+h3,
+h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.stamping-fee .heading {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: red;
+}
+
+.stamping-fee .row:last-child {
+    margin-top: 30px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.stamping-fee ul {
+    list-style-type: square;
+    margin: 0;
+    padding-left: 15px;
+    color: #999;
+}
+
+.stamping-fee p {
+    margin: 7px 0;
+}
+
+.stamping-fee ul li {
+    font-size: 14px;
+}
+
+.service-fees {
+    margin: 40px 0;
+}
+
+.service-fees .input-group-btn .btn-danger {
+    width: 100%;
+}
+
+.input-group-btn {
+    margin-left: 0;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 0;
+}
+
+.table-bordered tbody tr th,
+.table-bordered tbody tr td {
+    border: 1px solid #ddd;
+}
+
+.table tbody tr th,
+.table-bordered tbody tr td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border-color: #fff!important;
+}
+
+.pricing-table th {
+    background-color: #868686;
+    color: #FFF;
+}
+
+.pricing-table td {
+    background-color: #ededed;
+    color: #333;
+}
+
+.tourist-visa-fee h3,
+.business-visa-fee h3,
+.extra-service h3 {
+    margin-bottom: 10px;
+}
+
+.definitions p,
+.extra-service p {
+    margin: 10px 0;
+}
+
+.extra-service {
+    margin: 40px 0;
+}
+
+.right-corner {
+    background: url("../images/corner-bg-top-right.png") no-repeat scroll right top #ed5459;
+}
+
+.support-online-widget {
+    width: 100%;
+    background-color: #ED5459;
+    color: #FFF;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+}
+
+.support-online-widget .title {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #f28587;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.support-online-widget .email a {
+    color: #fff600;
+    font-size: 14px;
+}
+
+.support-online-widget .email a:hover {
+    text-decoration: underline;
+}
+
+.content-item {
+    margin: 40px 0;
+}
+
+.col-right {
+    padding-left: 20px;
+}
+
+.payment-online {
+    margin-bottom: 15px;
+    background-color: #DF1F26;
+}
+
+.payment-online .title {
+    color: #FFF;
+    font-size: 16px;
+    padding: 0;
+    margin: 10px 0 0 75px;
+}
+
+.payment-online a {
+    background: url("../images/secure.png") no-repeat scroll 10px center transparent;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.payment-online p {
+    color: #FFF;
+    font-size: 10px;
+    padding: 0;
+    margin-left: 75px;
+    line-height: 1em;
+    margin-top: 0px;
+}
+
+.confidence-widget,
+.service-widget {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.confidence-widget .banner {
+    background: url("../images/confidence-bg.jpg") bottom center transparent;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+}
+
+.confidence-widget .content {
+    border: 1px solid #CCC;
+    border-top: none;
+    padding: 10px 15px;
+}
+
+.confidence-widget .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.confidence-widget .content ul {
+    list-style: none;
+    list-style-image: url("../images/checkmark.png");
+    margin-left: 25px;
+    padding: 0;
+}
+
+.service-widget .banner {
+    background: url("../images/service-bg.jpg") top center transparent;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+}
+
+.service-widget .content ul li {
+    border-bottom: 1px solid #DDD;
+}
+
+.service-widget .content ul {
+    list-style: none;
+}
+
+.service-widget .content ul li a {
+    width: 100%;
+    padding: 10px;
+    line-height: 26px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    border-left: 2px solid #FFF;
+}
+
+.service-widget .content ul li a .passport {
+    background: url("../images/passport-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a .airport-concierge {
+    background: url("../images/airport-concierge-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a .car {
+    background: url("../images/car-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a .hotel {
+    background: url("../images/hotel-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a .travel {
+    background: url("../images/travel-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a .flight {
+    background: url("../images/flight-2.png") no-repeat scroll center center transparent;
+}
+
+.service-widget .content ul li a i {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.service-widget .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 15px;
+}
+
+.service-widget .content {
+    border: 1px solid #CCC;
+    border-top: none;
+    padding-top: 10px;
+}
+
+
+/* page extra-service */
+
+.services {
+    background: url("../images/service-bg (1).jpg") no-repeat scroll bottom center transparent;
+    min-height: 300px;
+    position: relative;
+    background-size: cover;
+}
+
+.services .text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: url("../images/foot-bg.png") repeat scroll 0 0 transparent;
+    width: 100%;
+    color: #fff;
+}
+
+.services h1 {
+    color: #E41E01;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.services h5 {
+    color: #000;
+}
+
+.radio {
+    font-size: 14px;
+}
+
+.radio label {
+    cursor: pointer;
+}
+
+.radio .processing-option {
+    display: none;
+}
+
+.radio-checked .processing-option {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.btn-social {
+    padding: 7px 30px;
+    text-align: left;
+    overflow: hidden;
+    width: 250px;
+    display: inline-block;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+    color: #fff;
+    background-color: #30487b;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+a.btn-social:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-google-plus {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.btn-google-plus:hover,
+.btn-google-plus:focus,
+.btn-google-plus:active,
+.btn-google-plus.active,
+.open .dropdown-toggle.btn-google-plus {
+    color: #fff;
+    background-color: #ca3523;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.login-form .switcher .switch-line {
+    border-left: 1px solid #ddd;
+    height: 450px;
+    left: 50%;
+    position: absolute;
+    width: 1px;
+    z-index: 0;
+}
+
+.login-form .switcher {
+    position: relative;
+    min-width: 62px;
+    min-height: 480px;
+}
+
+a.forgot-pass {
+    color: #004B91;
+    font-size: 13px;
+}
+
+.sign-in-width {
+    margin-top: 45px;
+}
+
+.login-form h1 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.select-gt {
+    margin-right: 10px;
+}
+
+.grid-date-post a {
+    color: #D40000;
+}
+
+
+/* page faqs */
+
+.faqs {
+    background: url("../images/faq-bg.jpg") no-repeat scroll bottom center transparent;
+    min-height: 300px;
+    position: relative;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* page contact */
+
+.contact-us-img {
+    background-image: url("../images/contactus.jpg");
+    background-position: 50% 18%;
+    background-repeat: no-repeat;
+    min-height: 185px;
+    overflow: hidden;
+}
+
+.contact-us-img .text .value-prop {
+    margin-top: 20px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #1570a6;
+    height: 148px;
+    color: #fff;
+}
+
+.value-prop h1 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.value-prop h5 {
+    margin-top: 0;
+}
+
+.contact-help h1,
+.touch-directly h1,
+.contact-info-form h1 {
+    padding: 15px 0;
+    font-weight: 500;
+}
+
+.contact-help img {
+    width: 100%;
+}
+
+.contact-help p,
+.touch-directly p {
+    margin-top: 5px;
+}
+
+.touch-directly .col-6 {
+    display: flex;
+}
+
+.touch-directly h2 {
+    margin: 0;
+}
+
+.touch-directly .message {
+    margin-left: 20px;
+}
+
+.info p {
+    width: 200px;
+}
+
+.info p:last-child {
+    width: 300px;
+}
+
+.info {
+    display: flex;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.contact-info-form .col-6:not(:first-child) {
+    margin-left: 20px;
+}
+
+.contact-info-form {
+    margin-bottom: 60px;
+}
+
+.news-content-excerpt a {
+    color: #000;
+}
+
+.wpcf7-form label {
+    width: 100%;
+}
+
+.wpcf7-form label input {
+    width: 100%;
+}
+
+.wpcf7-form input[type="submit"] {
+    color: #fff;
+    background-color: #DE4A4A;
+    border-color: #DE4A4A;
+    padding: 10px;
+}
+
+
+/* page faqs */
+
+.faqs-title .news-title h1 {
+    margin: 0;
+}
+
+#frmApply .row,
+#passport-info .row {
+    justify-content: flex-start;
+}
+
+
+/* page vietnam-embassy-list */
+
+.embassy {
+    background: url("../images/embassy-bg.jpg") no-repeat scroll bottom center transparent;
+    min-height: 300px;
+    position: relative;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.title-embassy {
+    text-align: center;
+}
+
+.title-embassy h1 {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.title-embassy p {
+    margin-top: 5px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination a {
+    width: 1000px;
+    text-decoration: none;
+    color: #717171;
+    font: bold 13px Arial, sans-serif;
+    padding: 8px 10px;
+    margin: 4px;
+    background-color: #F8F8F8;
+    text-align: center;
+}
+
+.pagination a:hover {
+    color: white;
+    background: #DA0000;
+}
+
+.nations {
+    margin: 20px 0;
+}
+
+.nations .number {
+    border-right: 1px solid #888;
+    font: 30px/40px Tahoma, Geneva, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    min-width: 50px;
+}
+
+.embassies {
+    border-top: 1px solid #E9E9E9;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.embassies .col-11 {
+    padding: 0 20px;
+}
+
+.embassies .col-11 .row {
+    justify-content: normal;
+}
+
+.review-visa-item.row-flex .col-4 {
+    margin: 0 5px;
+    text-align: center;
+}
+
+
+/* page vietnam-visa-news */
+
+.news-info .news-content .post-content-text {
+    margin-left: 0;
+}
+
+
+/* page question and answers */
+
+.list-question {
+    margin: 30px 0 60px;
+}
+
+.dwqa-ask-question {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+}
+
+.dwqa-ask-question a {
+    color: #fff;
+}
+
+.dwqa-ask-question a:hover {
+    text-decoration: none;
+}
+
+.dwqa-ask-question:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.tags-question {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.tags-question .widget-title {
+    font-size: 18px;
+    border-bottom: 1px solid #dedede;
+}
+
+.tags-question h4 {
+    margin-top: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.panel-body {
+    padding: 10px;
+}
+
+.tag-cloud a {
+    background-color: #666;
+    border: 1px solid #666;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: .2s;
+    margin: 3px 0;
+}
+
+.tag-cloud a:hover {
+    background-color: #3596da;
+    border: 1px solid #3596da;
+}
+
+.processing-cluster img {
+    width: 100%;
+}
+
+.processing-cluster .col-7 {
+    margin-left: 30px;
+}
+
+#review-visa .row-flex {
+    display: flex;
+}
+
+.dwqa-question-filter .dwqa-sort-by {
+    width: 130px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.embassy-list {
+    padding: 0 100px;
+}
+
+.apply-visa .btn-green {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 10px;
+}
+
+.apply-visa .btn-green:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+}
+
+.visa-extension ul,
+.forgotten-pass-item ul {
+    margin: 0 0 1.5em 3em;
+    font-size: 14px;
+}
+
+.forgotten-pass {
+    display: flex;
+}
+
+.datepicker {
+    width: 100%;
+}
+
+.hotels-reservation-form .col-6 {
+    width: 48%;
+}
+
+@media screen and (max-width: 1270px) {
+    .embassy-list {
+        padding: 0 70px;
+    }
+    .pagination {
+        display: block;
+        text-align: center;
+    }
+    .tab-step .note {
+        font-size: 20px;
+    }
+    ul.style-step li {
+        font-size: 14px;
+    }
+    .tab-step {
+        height: 36px;
+    }
+    .service-widget .content ul li a {
+        padding: 10px 0;
+        font-size: 11px;
+    }
+    .service-widget .content ul li a i {
+        margin-right: 0;
+    }
+    .col-right {
+        padding-left: 0;
+    }
+    .support-online-widget .email a {
+        font-size: 12px;
+    }
+    .confidence-widget .title {
+        font-size: 14px;
+        text-align: center;
+    }
+    .confidence-widget ul li {
+        font-size: 14px;
+    }
+    .confidence-widget .content {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tab-step {
+        height: 33px;
+    }
+    .tab-step .note {
+        font-size: 15px;
+    }
+    ul.style-step li {
+        font-size: 12px;
+    }
+    .support-content .f14,
+    .support-online-widget .email a {
+        font-size: 11px;
+    }
+    .support-online-widget {
+        padding: 15px 5px;
+    }
+    .embassies .col-11 .row {
+        display: block;
+    }
+    .embassies .col-11 .row .col-3 {
+        width: 45%;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    #frmApply .row,
+    #passport-info .row,
+    .step-apply-visa .row,
+    .login-vip .row {
+        display: block;
+    }
+    #frmApply .col-7,
+    #frmApply .col-5,
+    #frmApply .col-4,
+    .step-apply-visa .col-5,
+    .step-apply-visa .form-group .col-4,
+    .step-apply-visa .form-group .col-7,
+    #passport-info .col-7,
+    #step-3 .group,
+    .login-vip #step-2 .col-5,
+    .login-vip #step-2 .col-4,
+    .login-vip #step-2 .col-7 {
+        width: 100%;
+    }
+    #frmApply .panel-options .col-flex,
+    .step-apply-visa .col-flex,
+    .login-vip .col-flex {
+        display: flex;
+    }
+    .tab-step {
+        height: 65px;
+    }
+    .step-apply-visa .col-2 {
+        display: none;
+    }
+    .login-vip .col-2 {
+        display: none;
+    }
+    .service-widget .title {
+        font-size: 14px;
+    }
+    .news-col-1 .news-inner-wrap-view,
+    .news-col-list .news-inner-wrap-view {
+        flex-direction: column;
+    }
+    .contact .row {
+        flex-direction: column;
+    }
+    .contact .row .col-3,
+    .contact .row .col-6 {
+        width: 100%;
+    }
+    .forgotten-pass {
+        display: block;
+    }
+}
+
+.vip-banner {
+    background: url("../images/vietnam-visa-form.jpg") no-repeat scroll right center transparent;
+    min-height: 400px;
+    position: relative;
+    background-size: cover;
+    color: #fff;
+}
+
+.xmas-girl {
+    background: url("../images/xmas-girl.png") no-repeat scroll 0 bottom transparent;
+    width: 250px;
+    height: 393px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 7px;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.vip-content ul {
+    margin: 0 0 1.5em 3em;
+}
+
+.vip-content ol {
+    padding: 0
+}
+
+.th-rate {
+    background-color: #DE4A4A!important;
+    color: #FFF;
+}
+
+.vip-content {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .col-9,
+    .our-team .row .col-4,
+    .cluster .row .col-6,
+    .service-options .row .col-3,
+    .contact-information .row .col-3,
+    .hotels-reservation-form .row .col-6,
+    .vip-banner .row .col-7 {
+        width: 100%;
+    }
+    .list-question .row,
+    .our-team .row,
+    .cluster .row,
+    .service-options .row,
+    .contact-information .row,
+    .hotels-reservation-form .row,
+    .vip-banner .row {
+        display: block;
+    }
+    .list-question .row .col-3 {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .comment-list {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .processing-cluster .row,
+    .visa-tips .row {
+        display: block;
+    }
+    .processing-cluster .row .col-5,
+    .visa-tips .row .col-6 {
+        width: 100%;
+    }
+    .processing-cluster .row .col-7 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .review-visa-item .radio label {
+        font-size: 11px;
+    }
+    .dwqa-question-filter a {
+        font-size: 12px;
+    }
+    .dwqa-question-filter .dwqa-sort-by {
+        padding: 5px;
+    }
+    .embassies .col-11 .row .col-3:nth-child(odd) {
+        margin-right: 20px;
+    }
+    .fnav-links a {
+        font-size: 12px;
+    }
+    #post-184 .entry-content p {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .embassies .col-11 .row .col-3 {
+        width: 100%;
+    }
+    .cluster .btn-green {
+        font-size: 12px;
+    }
+    .site-info .link .row .col-3 {
+        width: 100%;
+    }
+    .wpcf7-form-control-wrap input {
+        width: 100%;
+    }
+}

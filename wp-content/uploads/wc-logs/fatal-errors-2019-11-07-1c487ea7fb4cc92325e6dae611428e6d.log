@@ -1,0 +1,4 @@
+2019-11-07T04:10:37+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\visa\wp-content\themes\visa-web\page-how-it-works.php on line 176
+
+2019-11-07T07:31:36+00:00 CRITICAL syntax error, unexpected 'content' (T_STRING), expecting ')' in C:\xampp\htdocs\visa\wp-content\themes\visa-web\page-about-us.php on line 8
+
