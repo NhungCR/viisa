@@ -365,7 +365,7 @@ get_header();
                                                 Our friendly drivers standing outside with your name on the welcome
                                                 sign. He will pick you up at the airport to your hotel.
                                             </div>
-                                            <div class="car-select">
+                                            <div class="car-select" style="display:none">
                                                 <label>Car type</label>
                                                 <select class="form-control car_type" name="car_type" id="car_type">
                                                     <option value="Economic Car" selected="selected">Economic Car
@@ -422,9 +422,7 @@ get_header();
                             </div>
                             <div class="panel-fees-item" style="display:none">
                                 <label>Extra services:</label>
-                                <div class="extra_services">
-                                    <!-- <div><label>2. Car pick-up</label><span class="price"></span></div> -->
-                                </div>
+                                <div class="extra_services"> </div>
                             </div>
                             <div class="panel-fees-item bggray">
                                 <div class="row">
@@ -1054,25 +1052,31 @@ get_header();
             var fast_checkin = document.getElementById('fast_checkin');
             var extra_services = document.getElementsByClassName('extra_services')[0];
 
-            group_size_input.addEventListener('change', (e) => {
-                let target = e.target;
-                let text = target.options[target.selectedIndex].text;
+            var car_pickup = document.getElementById('car_pickup');
+            var car_select = document.getElementsByClassName('car-select')[0];
+
+            var arrival_port = document.getElementById('arrival_port');
+            var car_type = document.getElementById('car_type');
+            var num_seat = document.getElementById('num_seat'); 
+
+            var total_fee = document.getElementsByClassName('total_fee')[0];
+
+            group_size_input.addEventListener('change', (e) => { 
+                let text = group_size_input.options[group_size_input.selectedIndex].text;
                 group_size_span.innerHTML = text;
                 updateServiceFee();
                 updateProcessingTimeFee() ;
                 updateFastCheckin();
             });
 
-            visa_type_input.addEventListener('change', (e) => {
-                let target = e.target;
-                let text = target.options[target.selectedIndex].text;
+            visa_type_input.addEventListener('change', (e) => { 
+                let text = visa_type_input.options[visa_type_input.selectedIndex].text;
                 visa_type_span.innerHTML = text;
                 updateServiceFee();
             });
 
-            visit_purpose_input.addEventListener('change', (e) => {
-                let target = e.target;
-                let text = target.options[target.selectedIndex].text;
+            visit_purpose_input.addEventListener('change', (e) => { 
+                let text = visit_purpose_input.options[visit_purpose_input.selectedIndex].text;
                 visit_purpose_span.innerHTML = text;
                 updateServiceFee();
             });
@@ -1083,19 +1087,48 @@ get_header();
             });
             private_visa_checkbox.addEventListener('change', () =>  updatePrivateLetter());
             fast_checkin.addEventListener('change', () =>  updateFastCheckin());
+            car_pickup.addEventListener('change', () =>  updateCarPickup());
+            car_type.addEventListener('change', () =>  updateCarPickup());
+            num_seat.addEventListener('change', () =>  updateCarPickup());
 
-            function getServiceFee(visa_type, purpose_entry){
+            function getServiceFee(){ 
+                let visa_type = visa_type_input.value;
+                let purpose_entry = visit_purpose_input.value;
+                // Gọi API truy xuất dữ liệu trả về
                 return Math.floor(Math.random() * 20);
-            }
-
-            function getProcessingTimeFee(visa_type, purpose_entry, ){
-                return Math.floor(Math.random() * 20);
+            } 
+            function getProcessingTimeFee(){ 
+                let visa_type = visa_type_input.value;
+                let purpose_entry = visit_purpose_input.value;
+                let processing_time = document.querySelector('input[name="processing_time"]:checked').value;
+                // Gọi API truy xuất dữ liệu trả về
+                return Math.floor(Math.random() * 20) + 1;
             }
             function getPrivateLetterFee(){
-                return Math.floor(Math.random() * 20);
+                 // Gọi API truy xuất dữ liệu trả về
+                return Math.floor(Math.random() * 20) + 1;
             }
             function getFastCheckinFee(){
-                return Math.floor(Math.random() * 20);
+                 // Gọi API truy xuất dữ liệu trả về
+                let air_port = arrival_port.value;
+
+                return Math.floor(Math.random() * 20) + 1;
+            }
+            function getPickupFee(){
+                let port = arrival_port.value;
+                let type = car_type.value;
+                let seat = num_seat.value;
+                // Gọi API truy xuất dữ liệu trả về
+                return Math.floor(Math.random() * 20) + 1;
+            }
+            function getTotalFee(){  
+                let person = group_size_input.value;
+                let total = person * getServiceFee();
+                total += person * getProcessingTimeFee();
+                if(private_visa_checkbox.checked) total += getPrivateLetterFee();
+                if(fast_checkin.checked) total += person * getFastCheckinFee();
+                if(car_pickup.checked) total += getPickupFee();
+                return total;
             }
     
             function updateServiceFee() {
@@ -1104,6 +1137,8 @@ get_header();
                  
                 let price = getServiceFee();
                 service_fee_span.innerHTML = `${price} USD x ${person_text} =  ${price * person} USD`;
+
+                updateTotalFee();
             }
             function updateProcessingTimeFee() {
 
@@ -1117,6 +1152,8 @@ get_header();
                 processing_note_t.innerHTML = process_time;
                 let price = getProcessingTimeFee();
                 processing_t.innerHTML = `${price} USD x ${person_text} =  ${price * person} USD`;
+                
+                updateTotalFee();
             }
             function updatePrivateLetter(){
                 if(private_visa_checkbox.checked){
@@ -1126,6 +1163,8 @@ get_header();
                 else{
                     private_visa_t.parentNode.style.display = 'none'; 
                 }
+                
+                updateTotalFee();
             }
             function updateFastCheckin(){
                 if(fast_checkin.checked){
@@ -1138,7 +1177,7 @@ get_header();
                     });
                     extra_services.innerHTML += 
                     `   <div>
-                            <label>${extra_services.childElementCount + 1}. Airport fast check-in</label>
+                            <label><label class="stt">${extra_services.childElementCount+1}. </label> Airport fast check-in</label>
                             <span class="price fast-checkin">${getFastCheckinFee()} x ${person_text} = ${getFastCheckinFee() * person} USD</span>
                         </div> `;
                 }
@@ -1146,8 +1185,45 @@ get_header();
                     extra_services.removeChild(extra_services.getElementsByClassName('fast-checkin')[0].parentNode);
                     if(extra_services.childElementCount == 0)
                         extra_services.parentNode.style.display = 'none';
+                } 
+               
+                Array.from(extra_services.children).forEach((e, index) => {
+                    e.getElementsByClassName('stt')[0].innerHTML = index + 1 +  '. ';
+                }); 
+                
+                updateTotalFee();
+            }
+            function updateCarPickup(){
+                if(car_pickup.checked){ 
+                    car_select.style.display = 'block';
+                    extra_services.parentNode.style.display = 'block';
+                    Array.from(extra_services.getElementsByClassName('car-pickup')).forEach(e => {
+                        extra_services.removeChild(e.parentNode);
+                    });
+                    extra_services.innerHTML += 
+                        ` <div>
+                            <label><label class="stt">${extra_services.childElementCount+1}. </label> Car pick-up</label>
+                            <span class="price car-pickup">(${car_type.options[car_type.selectedIndex].text}, ${num_seat.options[num_seat.selectedIndex].text}) = ${getPickupFee()} USD</span>
+                        </div>   `;
+                }
+                else {
+                    car_select.style.display = 'none';
+                    extra_services.removeChild(extra_services.getElementsByClassName('car-pickup')[0].parentNode);
+                    if(extra_services.childElementCount == 0)
+                        extra_services.parentNode.style.display = 'none';
                 }
                
+                    
+                    
+                Array.from(extra_services.children).forEach((e, index) => {
+                        e.getElementsByClassName('stt')[0].innerHTML = index + 1 +  '. ';
+                    });
+                
+                updateTotalFee();
+ 
+            }
+            function updateTotalFee(){
+                total_fee.innerHTML = getTotalFee() + " USD";
             }
 
             group_size_input.options.selectedIndex = 0;
