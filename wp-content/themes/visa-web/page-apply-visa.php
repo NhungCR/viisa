@@ -401,19 +401,18 @@ get_header();
                                         change in the next steps based on The Vietnam Immigration Rule</i>
                                 </div>
                             </div>
-                            <div class="panel-fees-item">
+                            <div class="panel-fees-item" style="display:none">
                                 <label>Processing time:</label><span class="processing_note_t"> </span>
                                 <div class="processing_t price">
                                 </div>
                             </div>
-                            <div class="panel-fees-item">
+                            <div class="panel-fees-item" style="display:none">
                                 <label>Private letter:</label><span class="private_visa_t price"> </span>
                             </div>
-                            <div class="panel-fees-item">
+                            <div class="panel-fees-item" style="display:none">
                                 <label>Extra services:</label>
                                 <div class="extra_services">
-                                    <div><label>1. Airport fast check-in</label><span class="price"></span></div>
-                                    <div><label>2. Car pick-up</label><span class="price"></span></div>
+                                    <!-- <div><label>2. Car pick-up</label><span class="price"></span></div> -->
                                 </div>
                             </div>
                             <div class="panel-fees-item bggray">
@@ -1034,41 +1033,110 @@ get_header();
             var visit_purpose_input = document.getElementById('visit_purpose');
             var visit_purpose_span = document.getElementsByClassName('visit_purpose')[0];
 
-            var price_span = document.getElementsByClassName('price')[0];
+            var service_fee_span = document.getElementsByClassName('price')[0];
 
-            let price_table = [
-                [12, 15, 29, 35, 45, 55],
-                [90, 95, 115, 130, 250, 350]
-            ];
+            var processing_note_t = document.getElementsByClassName('processing_note_t')[0];
+            var processing_t = document.getElementsByClassName('processing_t')[0];
+            var private_visa_t = document.getElementsByClassName('private_visa_t')[0];
+            var private_visa_checkbox = document.getElementById('private_visa');
+
+            var fast_checkin = document.getElementById('fast_checkin');
+            var extra_services = document.getElementsByClassName('extra_services')[0];
 
             group_size_input.addEventListener('change', (e) => {
                 let target = e.target;
                 let text = target.options[target.selectedIndex].text;
                 group_size_span.innerHTML = text;
-                updatePrice();
-
+                updateServiceFee();
+                updateProcessingTimeFee() ;
+                updateFastCheckin();
             });
 
             visa_type_input.addEventListener('change', (e) => {
                 let target = e.target;
                 let text = target.options[target.selectedIndex].text;
                 visa_type_span.innerHTML = text;
-                updatePrice();
+                updateServiceFee();
             });
 
             visit_purpose_input.addEventListener('change', (e) => {
                 let target = e.target;
                 let text = target.options[target.selectedIndex].text;
                 visit_purpose_span.innerHTML = text;
-                updatePrice();
+                updateServiceFee();
             });
+            Array.from(document.getElementsByClassName('processing_time')).forEach(e => {
+                e.addEventListener('change', () => 
+                    updateProcessingTimeFee()
+                )
+            });
+            private_visa_checkbox.addEventListener('change', () =>  updatePrivateLetter());
+            fast_checkin.addEventListener('change', () =>  updateFastCheckin());
 
+            function getServiceFee(visa_type, purpose_entry){
+                return Math.floor(Math.random() * 20);
+            }
 
-            function updatePrice() {
+            function getProcessingTimeFee(visa_type, purpose_entry, ){
+                return Math.floor(Math.random() * 20);
+            }
+            function getPrivateLetterFee(){
+                return Math.floor(Math.random() * 20);
+            }
+            function getFastCheckinFee(){
+                return Math.floor(Math.random() * 20);
+            }
+    
+            function updateServiceFee() {
                 let person = group_size_input.value;
-                let person_text = group_size_input.options.text;
-                let price = price_table[visit_purpose_input.selectedIndex][visa_type_input.selectedIndex];
-                price_span.innerHTML = `${price} USD x ${person_text} =  ${price * person} USD`;
+                let person_text = group_size_input.options[group_size_input.selectedIndex].text;
+                 
+                let price = getServiceFee();
+                service_fee_span.innerHTML = `${price} USD x ${person_text} =  ${price * person} USD`;
+            }
+            function updateProcessingTimeFee() {
+
+                let process_time = document.querySelector('input[name="processing_time"]:checked').value;
+                if(process_time == 'Normal') processing_note_t.parentNode.style.display = 'none'; 
+                else processing_note_t.parentNode.style.display = 'block'; 
+
+                let person = group_size_input.value;
+                let person_text = group_size_input.options[group_size_input.selectedIndex].text;
+                
+                processing_note_t.innerHTML = process_time;
+                let price = getProcessingTimeFee();
+                processing_t.innerHTML = `${price} USD x ${person_text} =  ${price * person} USD`;
+            }
+            function updatePrivateLetter(){
+                if(private_visa_checkbox.checked){
+                    private_visa_t.parentNode.style.display = 'block'; 
+                    private_visa_t.innerHTML = getPrivateLetterFee() + " USD";
+                }
+                else{
+                    private_visa_t.parentNode.style.display = 'none'; 
+                }
+            }
+            function updateFastCheckin(){
+                if(fast_checkin.checked){
+                    let person = group_size_input.value;
+                    let person_text = group_size_input.options[group_size_input.selectedIndex].text;
+
+                    extra_services.parentNode.style.display = 'block';
+                    Array.from(extra_services.getElementsByClassName('fast-checkin')).forEach(e => {
+                        extra_services.removeChild(e.parentNode);
+                    });
+                    extra_services.innerHTML += 
+                    `   <div>
+                            <label>${extra_services.childElementCount + 1}. Airport fast check-in</label>
+                            <span class="price fast-checkin">${getFastCheckinFee()} x ${person_text} = ${getFastCheckinFee() * person} USD</span>
+                        </div> `;
+                }
+                else{
+                    extra_services.removeChild(extra_services.getElementsByClassName('fast-checkin')[0].parentNode);
+                    if(extra_services.childElementCount == 0)
+                        extra_services.parentNode.style.display = 'none';
+                }
+               
             }
 
             group_size_input.options.selectedIndex = 0;

@@ -390,6 +390,10 @@ h2 {
     position: relative;
 }
 
+.processing_t {
+    text-align: right;
+}
+
 .text-banner .text-title {
     margin: 10px 0 0;
     font-weight: 100;
