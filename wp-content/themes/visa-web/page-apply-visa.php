@@ -357,16 +357,27 @@ get_header();
                                         </div>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" id="fast_checkin" name="fast_checkin"
-                                                    class="fast_checkin" value="1">
-                                                Airport fast-track
+                                                <input type="checkbox" id="car_pickup" name="car_pickup"
+                                                    class="car_pickup" value="1">
+                                                Airport car pick-up
                                             </label>
                                             <div class="processing-note">
-                                                Due to Vietnam Immigration Office policy, they list a number of people
-                                                on the same visa letter, so we offer private/confidential visa letter is
-                                                showing your name or your group in 1 letter without others name on your
-                                                letter. But you have to pay extra <b>10 USD</b>/letter for you or your
-                                                group.
+                                                Our friendly drivers standing outside with your name on the welcome
+                                                sign. He will pick you up at the airport to your hotel.
+                                            </div>
+                                            <div class="car-select">
+                                                <label>Car type</label>
+                                                <select class="form-control car_type" name="car_type" id="car_type">
+                                                    <option value="Economic Car" selected="selected">Economic Car
+                                                    </option>
+                                                </select>
+                                                <label>Seats</label>
+                                                <select class="form-control num_seat" name="num_seat" id="num_seat">
+                                                    <option value="4" selected="selected">4 seats</option>
+                                                    <option value="7">7 seats</option>
+                                                    <option value="16">16 seats</option>
+                                                    <option value="24">24 seats</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
