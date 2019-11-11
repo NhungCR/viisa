@@ -405,6 +405,12 @@ get_header();
                             <div class="panel-fees-item">
                                 <label>Purpose of entry:</label><span class="visit_purpose"> </span>
                             </div>
+                            <div class="panel-fees-item s1hidden">
+                                <label>Entry Date:</label><span class="entry_date_span">01/01/2019</span>
+                            </div>
+                            <div class="panel-fees-item s1hidden">
+                                <label>Exit Date:</label><span class="exit_date_span">01/01/2019</span>
+                            </div>
                             <div class="panel-fees-item">
                                 <label>Visa service fee:</label><span class="price"> </span>
                                 <div>
@@ -1002,36 +1008,6 @@ get_header();
             </div>
         </div>
 
-
-        <script>
-            
-            let stepNumber = Array.from(document.getElementsByClassName('number'));
-            let stepContent = Array.from(document.getElementsByClassName('step-content'));
-            Array.from(document.getElementsByClassName('submit-next')).forEach(ele => {
-                ele.addEventListener('click', () => {
-                    let index = document.getElementsByClassName('active').length;
-
-                    stepNumber[index].classList.add('active');
-                    stepContent.forEach(st => st.classList.add('hidden'));
-                    stepContent[index].classList.remove('hidden');
-                    
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            })
-            Array.from(document.getElementsByClassName('btn_back')).forEach(ele => {
-                ele.addEventListener('click', () => {
-                    let index = document.getElementsByClassName('active').length;
-                    index--;
-                    stepNumber[index].classList.remove('active');
-                    
-                    stepContent.forEach(st => st.classList.add('hidden')); 
-                    stepContent[index-1].classList.remove('hidden');
-
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                });
-            })
-        </script>
-
         <script>
             var group_size_input = document.getElementById('group_size');
             var group_size_span = document.getElementsByClassName('group_size')[0];
@@ -1061,6 +1037,62 @@ get_header();
 
             var total_fee = document.getElementsByClassName('total_fee')[0];
 
+            var formContent = '';   
+            var arrival_year = document.getElementById('arrival_year'); 
+            var arrival_month = document.getElementById('arrival_month'); 
+            var arrival_date = document.getElementById('arrival_date'); 
+            var exit_year = document.getElementById('exit_year'); 
+            var exit_month = document.getElementById('exit_month'); 
+            var exit_date = document.getElementById('exit_date'); 
+            var step3Panel = document.getElementById('step-3').getElementsByClassName('panel-fees')[0];
+            var entry_date_span = document.getElementsByClassName('entry_date_span')[0]; 
+            var exit_date_span = document.getElementsByClassName('exit_date_span')[0]; 
+        </script>
+
+        <script>
+            Date.prototype.toString = function() { 
+                let date = this.toJSON().slice(0, 10); 
+                return date.slice(8, 10) + '/' + date.slice(5, 7) + '/' + date.slice(0, 4);
+            } 
+
+            let stepNumber = Array.from(document.getElementsByClassName('number'));
+            let stepContent = Array.from(document.getElementsByClassName('step-content'));
+            Array.from(document.getElementsByClassName('submit-next')).forEach(ele => {
+                ele.addEventListener('click', () => {
+                    let index = document.getElementsByClassName('active').length;
+                    if(index == 1){ 
+
+                        entry_date_span.innerHTML = `${arrival_month.options[arrival_month.selectedIndex].text}/${arrival_date.value}/${arrival_year.value}`;
+                        exit_date_span.innerHTML = `${exit_month.options[exit_month.selectedIndex].text}/${arrival_date.value}/${exit_year.value}`;
+                        formContent = document.getElementById('step-1').getElementsByClassName('panel-fees')[0].innerHTML;
+                         
+                    }
+                    if(index == 2){
+                        step3Panel.innerHTML = formContent;
+                    }
+
+                    stepNumber[index].classList.add('active');
+                    stepContent.forEach(st => st.classList.add('hidden'));
+                    stepContent[index].classList.remove('hidden');
+                    
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            })
+            Array.from(document.getElementsByClassName('btn_back')).forEach(ele => {
+                ele.addEventListener('click', () => {
+                    let index = document.getElementsByClassName('active').length;
+                    index--;
+                    stepNumber[index].classList.remove('active');
+                    
+                    stepContent.forEach(st => st.classList.add('hidden')); 
+                    stepContent[index-1].classList.remove('hidden');
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                });
+            })
+        </script>
+
+        <script> 
             group_size_input.addEventListener('change', (e) => { 
                 let text = group_size_input.options[group_size_input.selectedIndex].text;
                 group_size_span.innerHTML = text;

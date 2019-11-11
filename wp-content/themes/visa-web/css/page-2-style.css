@@ -35,6 +35,10 @@
     padding: 5px 0;
 }
 
+#step-1 .s1hidden{
+    display: none;
+}
+
 .service-form label {
     font-weight: 400;
     font-size: 14px;
